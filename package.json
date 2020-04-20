@@ -1,0 +1,27 @@
+{
+  "name": "p5-sketchbook",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "p5": "^1.0.0",
+    "p5snap": "github:zachkrall/p5snap",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-entry-plus": "^1.0.18"
+  },
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

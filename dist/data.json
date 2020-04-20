@@ -1,0 +1,14 @@
+{
+  "sketches": [
+    {
+      "name": "sketch02",
+      "path": "./sketch/sketch02/index.html",
+      "image": "./sketch/sketch02/preview.png"
+    },
+    {
+      "name": "sketch01",
+      "path": "./sketch/sketch01/index.html",
+      "image": "./sketch/sketch01/preview.png"
+    }
+  ]
+}
