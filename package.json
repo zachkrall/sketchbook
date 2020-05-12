@@ -14,7 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "p5": "^1.0.0",
-    "p5snap": "github:zachkrall/p5snap",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11",
     "webpack-entry-plus": "^1.0.18"
