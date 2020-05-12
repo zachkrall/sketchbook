@@ -4,7 +4,7 @@ const path = require('path')
 
 /* external modules */
 const entryPlus = require('webpack-entry-plus')
-const snap = require('p5snap/modules/snap.js')
+const snap = require('p5snap/lib/snap.js')
 
 /* --- GET SKETCH PATHS --- */
 const sketchDir = './sketch/'
