@@ -3,27 +3,27 @@ const compileToFunctions = require('vue-template-compiler').compileToFunctions
 
 const Entry = Vue.component('Entry', {
   name: 'Entry',
-  props: ['path','name','image'],
-  data(){
+  props: ['path', 'name', 'image'],
+  data() {
     return {
       iframe: false
     }
   },
   methods: {
-    iframeTrue(event){
-      if(!this.iframe){
+    iframeTrue(event) {
+      if (!this.iframe) {
         event.preventDefault()
         this.iframe = true
       }
     },
-    iframeFalse(event){
+    iframeFalse(event) {
       event.preventDefault()
       this.iframe = false
     }
   },
-  mounted(){
-    this.$refs.container.addEventListener('click', this.iframeTrue)
-    this.$refs.container.addEventListener('blur', this.iframeFalse)
+  mounted() {
+    // this.$refs.container.addEventListener('click', this.iframeTrue)
+    // this.$refs.container.addEventListener('blur', this.iframeFalse)
   },
   ...compileToFunctions(`<a
     :href="path"
@@ -32,17 +32,16 @@ const Entry = Vue.component('Entry', {
     :style="{ backgroundImage: 'url(' + image + ')'}"
     title="click to preview">
     <div class="artCard-label">{{ name }}</div>
-    <iframe v-if="iframe" scrolling="no" :src="path"></iframe>
 </a>`)
 })
 
 const List = Vue.component('List', {
-  name: "List",
+  name: 'List',
   props: ['items'],
   components: {
     Entry
   },
-  data(){
+  data() {
     return {}
   },
   ...compileToFunctions(`<div>

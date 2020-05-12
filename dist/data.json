@@ -1,14 +1,19 @@
 {
   "sketches": [
     {
-      "name": "sketch02",
-      "path": "./sketch/sketch02/index.html",
-      "image": "./sketch/sketch02/preview.png"
+      "name": "2020-05-11",
+      "path": "./sketch/2020-05-11/index.html",
+      "image": "./sketch/2020-05-11/preview.png"
     },
     {
-      "name": "sketch01",
-      "path": "./sketch/sketch01/index.html",
-      "image": "./sketch/sketch01/preview.png"
+      "name": "2019-07-03",
+      "path": "./sketch/2019-07-03/index.html",
+      "image": "./sketch/2019-07-03/preview.png"
+    },
+    {
+      "name": "2018-05-21",
+      "path": "./sketch/2018-05-21/index.html",
+      "image": "./sketch/2018-05-21/preview.png"
     }
   ]
 }
