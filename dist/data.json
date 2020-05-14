@@ -1,6 +1,11 @@
 {
   "sketches": [
     {
+      "name": "2020-05-12",
+      "path": "./sketch/2020-05-12/index.html",
+      "image": "./sketch/2020-05-12/preview.png"
+    },
+    {
       "name": "2020-05-11",
       "path": "./sketch/2020-05-11/index.html",
       "image": "./sketch/2020-05-11/preview.png"

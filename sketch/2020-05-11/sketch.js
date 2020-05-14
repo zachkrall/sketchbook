@@ -1,5 +1,7 @@
 import p5 from 'p5'
 
+global.text = 'Next\nWorld\nOver'
+
 let s = p => {
   p.setup = () => {
     p.createCanvas(window.innerWidth, window.innerHeight)
@@ -29,10 +31,14 @@ let s = p => {
       p.textSize(fontSize)
       p.textStyle(p.BOLD)
       p.textLeading(fontSize * 0.8)
-      p.text('Next\nWorld\nOver', 0, 0)
+      p.text(text, 0, 0)
       p.pop()
     }
   }
+
+  window.addEventListener('resize', () => {
+    p.resizeCanvas(window.innerWidth, window.innerHeight)
+  })
 }
 
 let sketch = new p5(s)

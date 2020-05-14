@@ -60,8 +60,8 @@ function createPreviewImages(sketchPaths = []) {
 }
 
 /* --- CREATE INDEX FILES --- */
-// createIndexFiles(sketchPaths)
-// createSketchJson(sketchPaths)
+createIndexFiles(sketchPaths)
+createSketchJson(sketchPaths)
 // createPreviewImages(sketchPaths)
 
 const entryFiles = [
@@ -83,6 +83,7 @@ module.exports = {
     filename: '[name]'
   },
   devServer: {
+    port: 3000,
     writeToDisk: true,
     contentBase: path.resolve(__dirname)
   }
