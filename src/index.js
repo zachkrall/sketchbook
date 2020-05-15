@@ -6,7 +6,7 @@ const config = require('../sketchbook.config.js')
 const components = require('./components.js')
 
 const App = Vue.extend({
-  data(){
+  data() {
     return {
       ...config,
       sketches: []
@@ -15,14 +15,18 @@ const App = Vue.extend({
   components: {
     List: components.List
   },
-  mounted(){
+  mounted() {
     fetch('./dist/data.json')
-    .then(res=>res.json())
-    .then(json=>{
-      this.sketches = json.sketches
-    })
+      .then(res => res.json())
+      .then(json => {
+        this.sketches = json.sketches
+      })
   },
   ...compileToFunctions(`<div id="app">
+  <header style="text-align:center;">
+  <br/>
+  Rough Visual Experiments
+  </header>
 <nav>
   <span><b>{{title}}</b> / <b>{{ author }}</b></span>
   <a :href="homepage">Homepage</a>
