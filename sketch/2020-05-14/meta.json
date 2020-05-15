@@ -1,0 +1,5 @@
+{
+  "title": "Just Do It",
+  "description": "Inspired by DIA Studio's motion graphics, this is an experiment in changing text visibility using GLSL-like functions. Functions take in letter's x and y coordinates to determine visibility.",
+  "tags": ["typography"]
+}

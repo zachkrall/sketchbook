@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Kale Mono X';
+  src: url('./Kale_Mono_X/Kale Sans Trial Mono-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: Icons;
+  src: url('./IconFont-Regular-0.9-a.woff');
+}

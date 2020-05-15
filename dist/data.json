@@ -1,34 +1,55 @@
-{
-  "sketches": [
-    {
-      "name": "2020-05-14",
-      "path": "./sketch/2020-05-14/index.html",
-      "image": "./sketch/2020-05-14/preview.png"
-    },
-    {
-      "name": "2020-05-13",
-      "path": "./sketch/2020-05-13/index.html",
-      "image": "./sketch/2020-05-13/preview.png"
-    },
-    {
-      "name": "2020-05-12",
-      "path": "./sketch/2020-05-12/index.html",
-      "image": "./sketch/2020-05-12/preview.png"
-    },
-    {
-      "name": "2020-05-11",
-      "path": "./sketch/2020-05-11/index.html",
-      "image": "./sketch/2020-05-11/preview.png"
-    },
-    {
-      "name": "2019-07-03",
-      "path": "./sketch/2019-07-03/index.html",
-      "image": "./sketch/2019-07-03/preview.png"
-    },
-    {
-      "name": "2018-05-21",
-      "path": "./sketch/2018-05-21/index.html",
-      "image": "./sketch/2018-05-21/preview.png"
-    }
-  ]
-}
+[
+  {
+    "title": "Just Do It",
+    "path": "./sketch/2020-05-14",
+    "date": "20200514",
+    "description": "Inspired by DIA Studio's motion graphics, this is an experiment in changing text visibility using GLSL-like functions. Functions take in letter's x and y coordinates to determine visibility.",
+    "tags": [
+      "typography"
+    ]
+  },
+  {
+    "title": "Overload",
+    "path": "./sketch/2020-05-13",
+    "date": "20200513",
+    "description": "3D planes changing distance from origin with sin wave",
+    "tags": [
+      "typography"
+    ]
+  },
+  {
+    "title": "Please Stay Inside",
+    "path": "./sketch/2020-05-12",
+    "date": "20200512",
+    "description": "Text position increased based on distance from center with an offset to create circular 3D effect.",
+    "tags": [
+      "typography"
+    ]
+  },
+  {
+    "title": "Next World OVer",
+    "path": "./sketch/2020-05-11",
+    "date": "20200511",
+    "description": "2D text layers with offset based on mouse position.",
+    "features": [
+      "mouse"
+    ],
+    "tags": [
+      "typography"
+    ]
+  },
+  {
+    "title": "Sin Waves",
+    "path": "./sketch/2019-07-03",
+    "date": "20190703",
+    "tags": [
+      "Abstract"
+    ],
+    "description": "Inspired by Samir Zahran"
+  },
+  {
+    "title": "",
+    "path": "./sketch/2018-05-21",
+    "date": "20180521"
+  }
+]

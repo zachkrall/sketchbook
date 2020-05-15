@@ -1,0 +1,6 @@
+{
+  "title": "Next World OVer",
+  "description": "2D text layers with offset based on mouse position.",
+  "features": ["mouse"],
+  "tags": ["typography"]
+}

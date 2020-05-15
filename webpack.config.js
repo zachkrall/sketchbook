@@ -4,65 +4,19 @@ const path = require('path')
 
 /* external modules */
 const entryPlus = require('webpack-entry-plus')
-// const snap = require('p5snap/lib/snap.js')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-/* --- GET SKETCH PATHS --- */
+const sketchJson = require('./utils/sketchJson')
+
+/* sketch paths */
 const sketchDir = './sketch/'
-const sketchPaths = fs.readdirSync(sketchDir).reverse()
+const sketchPaths = fs.readdirSync(sketchDir)
 
-function createSketchJson(sketchPaths = []) {
-  let obj = {
-    sketches: sketchPaths.map(p => ({
-      name: p,
-      path: `${sketchDir}${p}/index.html`,
-      image: `${sketchDir}${p}/preview.png`
-    }))
-  }
-  /* output */
-  fs.writeFileSync('./dist/data.json', JSON.stringify(obj, null, 2), {
-    encoding: 'UTF-8'
-  })
-}
-
-/* --- GET INDEX HTML TEMPLATE --- */
-const indexTemplate = fs.readFileSync('./src/index_template.html', {
-  encoding: 'UTF-8'
-})
-
-function createIndexFiles(sketchPaths = []) {
-  sketchPaths.forEach(p => {
-    fs.writeFileSync(`${sketchDir}${p}/index.html`, indexTemplate, {
-      encoding: 'UTF-8'
-    })
-  })
-}
-
-function createPreviewImages(sketchPaths = []) {
-  return new Promise(function (resolve, reject) {
-    sketchPaths.forEach(p => {
-      let sketch = fs
-        .readFileSync(`${sketchDir}${p}/sketch.js`, { encoding: 'UTF-8' })
-        .replace("import p5 from 'p5'", '')
-        .replace('let s = ', '')
-        .replace('let sketch = new p5(s)', '')
-
-      snap({
-        raw_sketch: sketch,
-        output_path: path.resolve(__dirname, `${sketchDir}${p}/`),
-        width: 1920,
-        height: 1080,
-        instance: true,
-        filename: 'preview'
-      })
-    })
-    resolve()
-  })
-}
-
-/* --- CREATE INDEX FILES --- */
-createIndexFiles(sketchPaths)
-createSketchJson(sketchPaths)
-// createPreviewImages(sketchPaths)
+sketchJson(
+  sketchPaths.map(p => path.resolve(sketchDir, p)),
+  path.resolve(__dirname, 'dist', 'data.json')
+)
 
 const entryFiles = [
   {
@@ -81,6 +35,43 @@ module.exports = {
   output: {
     path: path.resolve(__dirname),
     filename: '[name]'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
+      {
+        test: /\.vue$/,
+        use: {
+          loader: 'vue-loader'
+        }
+      },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
+      }
+    ]
+  },
+  plugins: [
+    new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({
+      filename: './dist/style.css'
+    })
+  ],
+  watchOptions: {
+    ignored: ['./www/**', 'node_modules']
+  },
+  resolve: {
+    alias: {
+      '~': path.resolve(__dirname, 'src')
+    }
   },
   devServer: {
     port: 3000,

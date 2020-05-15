@@ -1,0 +1,177 @@
+
+nav[data-v-65af85a3] {
+  padding: 1rem;
+}
+a[data-v-65af85a3] {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #000;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25em;
+  transition: 0.3s color ease, 0.3s background ease;
+}
+a[data-v-65af85a3]:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+header[data-v-61dd7a3d] {
+  padding: 1rem;
+}
+h1[data-v-61dd7a3d] {
+  font-weight: normal;
+}
+p[data-v-61dd7a3d] {
+  padding: 1rem 0;
+  text-transform: none;
+  max-width: 30em;
+}
+
+
+.mono[data-v-15c1b052] {
+  font-family: 'Kale Mono X', monospace;
+  font-size: 0.8em;
+  padding-bottom: 0.5em;
+}
+.gallery[data-v-15c1b052] {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+@media screen and (min-width: 900px) {
+.gallery[data-v-15c1b052] {
+    grid-template-columns: repeat(4, 1fr);
+}
+}
+@media screen and (max-width: 400px) {
+.gallery[data-v-15c1b052] {
+    grid-template-columns: 1fr;
+}
+}
+a[data-v-15c1b052] {
+  color: inherit;
+  text-decoration: none;
+}
+@media screen and (max-width: 400px) {
+a[data-v-15c1b052] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+}
+a .mono[data-v-15c1b052] {
+    grid-column: 2 span;
+}
+a[data-v-15c1b052] {
+    font-size: 0.8em;
+}
+}
+p[data-v-15c1b052] {
+  text-transform: none;
+  color: #999;
+  padding-bottom: 0.5em;
+}
+.thumbnail[data-v-15c1b052] {
+  max-width: 100%;
+  height: 0px;
+  padding-bottom: 100%;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.thumbnail img[data-v-15c1b052] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+a ul[data-v-15c1b052] {
+  margin: 0.8em 0;
+  font-size: 0.8em;
+  display: inline-block;
+  font-family: 'Kale Mono X', monospace;
+}
+a ul li[data-v-15c1b052] {
+  display: inline-block;
+}
+a ul li img[data-v-15c1b052] {
+  height: 1.2em;
+  vertical-align: middle;
+}
+
+
+footer[data-v-40ab164b] {
+  padding: 1rem;
+  font-family: 'Kale Mono X';
+  color: #999;
+}
+a[data-v-40ab164b] {
+  color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, 'Helvetica Neue', Helvetica, Icons, sans-serif;
+  background: #fff;
+  color: #000;
+
+  /* letter-spacing: -0.5pt; */
+  word-spacing: 0.01rem;
+  line-height: 1;
+
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  text-transform: uppercase;
+}
+

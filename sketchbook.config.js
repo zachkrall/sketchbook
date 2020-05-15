@@ -1,5 +1,5 @@
 module.exports = {
-  "title": "Sketchbook",
-  "author": "Zach Krall",
-  "homepage": "https://zachkrall.com"
+  title: 'Sketchbook Archive',
+  author: 'Zach Krall',
+  homepage: 'https://zachkrall.com'
 }
