@@ -3,7 +3,7 @@
     <a
       v-for="({ title, path, description, date, features },
       key) in $props.items"
-      :href="path"
+      :href="path + '/index.html'"
       :key="key"
     >
       <div class="mono">{{ formatDate(date) }}</div>
