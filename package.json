@@ -7,6 +7,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server",
+    "new": "cp -R ./utils/template_sketch \"./sketch/$(date '+%Y-%m-%d')\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
