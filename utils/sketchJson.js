@@ -9,7 +9,7 @@ module.exports = async (sketchPaths, output) => {
     let slug = p.split('/').splice(-1, 1)[0]
     let meta = {
       title: '',
-      path: `./sketch/${slug}`,
+      path: `./sketch/${slug}/index.html`,
       date: slug.replace(/-/g, '')
     }
 
