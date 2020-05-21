@@ -1,8 +1,11 @@
 import p5 from 'p5'
 
 let s = p => {
+  let canvas
+
   p.setup = () => {
-    p.createCanvas(window.innerWidth, window.innerHeight)
+    canvas = p.createCanvas(window.innerWidth, window.innerHeight)
+    canvas.parent('#app')
   }
 
   p.draw = () => {

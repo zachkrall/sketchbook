@@ -6,7 +6,8 @@ let s = p => {
   let rotation = 0
 
   p.setup = () => {
-    let canvas = p.createCanvas(window.innerWidth, window.innerHeight, p.WEBGL)
+    let canvas = p.createCanvas(600, 800, p.WEBGL)
+    canvas.parent('#app')
     let gl = canvas.elt.getContext('webgl')
     gl.disable(gl.DEPTH_TEST)
 
@@ -36,7 +37,7 @@ let s = p => {
     )
 
     rotation += 1.2
-    p.translate(10, 0, window.innerWidth * 0.2)
+    p.translate(10, 0, 0)
     // p.rotateY(Math.PI / 8)
 
     p.push()
@@ -53,11 +54,6 @@ let s = p => {
 
     p.pop()
   }
-
-  window.addEventListener('resize', () => {
-    p.resizeCanvas(window.innerWidth, window.innerHeight)
-    p.ortho(-p.width / 2, p.width / 2, p.height / 2, -p.height / 2, 0, 1000)
-  })
 }
 
 let sketch = new p5(s)

@@ -2,7 +2,8 @@ import p5 from 'p5'
 
 let s = p => {
   p.setup = () => {
-    p.createCanvas(window.innerWidth, window.innerHeight)
+    let canvas = p.createCanvas(600, 800)
+    canvas.parent('#app')
     p.textSize(10)
     p.textAlign(p.CENTER, p.CENTER)
   }
@@ -55,8 +56,8 @@ let s = p => {
     // change background color
     p.background(invert ? 255 : 0)
 
-    for (let x = 0; x < p.width; x += spacing) {
-      for (let y = 0; y < p.height; y += spacing) {
+    for (let x = spacing; x < p.width; x += spacing) {
+      for (let y = spacing; y < p.height; y += spacing) {
         // draw each letter
         p.push()
         if (invert) p.blendMode(p.DIFFERENCE)
@@ -74,9 +75,9 @@ let s = p => {
     updateString(counter)
   }, 1000)
 
-  window.addEventListener('resize', () => {
-    p.resizeCanvas(window.innerWidth, window.innerHeight)
-  })
+  // window.addEventListener('resize', () => {
+  //   p.resizeCanvas(window.innerWidth, window.innerHeight)
+  // })
 }
 
 let sketch = new p5(s)

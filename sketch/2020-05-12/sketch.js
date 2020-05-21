@@ -7,17 +7,13 @@ const range = n => {
     .map((e, i) => i)
 }
 
-const getWidth = () => window.innerWidth
-
-const getHeight = () => window.innerHeight
-
-const scale = (y, amp) => {
-  return Math.sin((y / getHeight()) * Math.PI) * amp
-}
-
 let s = p => {
+  const scale = (y, amp) => {
+    return Math.sin((y / p.height) * Math.PI) * amp
+  }
+
   class TextItem {
-    constructor({ string = 'Hello, World', x = getWidth() * 0.5, y = 0 } = {}) {
+    constructor({ string = 'Hello, World', x = p.width * 0.5, y = 0 } = {}) {
       this.string = string
       this.y = y
     }
@@ -35,9 +31,9 @@ let s = p => {
         0,
         1,
         0,
-        p.map(size, 0, 80, 130, 0) * (this.y > getHeight() * 0.5 ? -1 : 1)
+        p.map(size, 0, 80, 130, 0) * (this.y > p.height * 0.5 ? -1 : 1)
       )
-      p.text(this.string.toUpperCase(), getWidth() * 0.5, this.y)
+      p.text(this.string.toUpperCase(), p.width * 0.5, this.y)
       p.pop()
     }
     update() {
@@ -54,25 +50,22 @@ let s = p => {
       })
   )
   p.setup = () => {
-    p.createCanvas(getWidth(), getHeight())
-    textItems = textItems.filter(i => i.y > 0 && i.y < getHeight())
+    let canvas = p.createCanvas(600, 800)
+    canvas.parent('#app')
+    textItems = textItems.filter(i => i.y > 0 && i.y < p.height)
   }
 
   p.draw = () => {
     p.background(0)
 
     textItems.forEach((t, i, a) => {
-      if (t.y > getHeight() - 40) {
+      if (t.y > p.height - 40) {
         t.y = 0
       }
       t.draw()
       t.update()
     })
   }
-
-  window.addEventListener('resize', () => {
-    p.resizeCanvas(getWidth(), getHeight())
-  })
 }
 
 let sketch = new p5(s)

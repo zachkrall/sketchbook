@@ -5,14 +5,15 @@ let s = p => {
     update = 0
 
   p.setup = () => {
-    p.createCanvas(window.innerWidth, window.innerHeight)
+    let canvas = p.createCanvas(600, 800)
+    canvas.parent('#app')
   }
 
   p.draw = () => {
     let options = ['again', 'and']
     let string = options[Math.floor(update) % options.length]
 
-    mapped = p.sin(p.frameCount * 0.1) * 5
+    mapped = p.sin(p.frameCount * 0.1) * 20
 
     p.background(250)
 
